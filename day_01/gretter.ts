@@ -36,5 +36,11 @@ let sent: string = `hello welcome here ${nowname}`
 //ts操作数组
 let list: number[] = [1,2,3]
 //第二种方法 Array<数据类型>
-let listMain: Array<number> = [1,2,3]
+let listMain: Array<number> = [1,2,3];
+// 规范函数的变量的规范
+let x: [string,number] = ["Xin",123];// actions is ok
+//let y: [String,number] = [123,'commit'];//error 
 console.log(listMain)
+
+//需要运行该文件的话  首先是再安装了 -g typescript 的条件之下  检测ts 是否安装成功  ts -v
+//运行命令 ts gretter.ts
