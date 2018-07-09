@@ -30,4 +30,18 @@ var sent = "hello welcome here " + nowname;
 var list = [1, 2, 3];
 //第二种方法 Array<数据类型>
 var listMain = [1, 2, 3];
-console.log(listMain);
+//枚举 可举例的样式
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+var c = Color.Red;
+var notSure = 4;
+notSure = "I am doctor";
+function wranUser() {
+    alert(" This is my wraning message ");
+}
+wranUser();
+console.log(c);
