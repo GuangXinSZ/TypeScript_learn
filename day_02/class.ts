@@ -91,3 +91,54 @@ console.log(hardword.getElevatorPitch())
 // if (employee.fullName) {
 //     alert(employee.fullName);
 // }
+// readonly 修饰符
+class Grid {
+    //默认
+    constructor (public scale: number) {
+
+    }
+    static origin = { x:0,y:0 };
+    //传值
+    calculateDistanceFromOrigin(point: {x: number, y: number}) {
+        //Grid.origin.x 访问对象的静态变量
+        let xDist = ( point.x - Grid.origin.x );
+        let yDist = ( point.y - Grid.origin.y );
+        return (xDist * xDist + yDist * yDist) / this.scale;
+    }
+}
+let grid1 = new Grid(1.0);
+let grid2 = new Grid(5.0);
+
+console.log(grid1.calculateDistanceFromOrigin({x:10,y:10}));
+console.log(grid2.calculateDistanceFromOrigin({x:50,y:50}));
+//抽象类
+abstract class AnimalDog {
+    abstract makeSound(): void;
+    move(): void {
+        console.log("roaming the earch")
+    }
+}
+//抽象类的调用方法
+abstract class Department {
+    thenName: string;
+    constructor ( public name: string  ){
+        this.thenName = name
+    };
+    printName(): void {
+        console.log('Department name'+ this.thenName)
+    }
+    //穿件一个抽象类
+    abstract printMetting(): void;//此方法必须在派生的类中去实现 也就是说定义了规范
+}
+class AccountingDepartment extends Department {
+    constructor () {
+        super("Acconuting ad Audting"); // 在派生类的构造函数中必须调用 super()
+    }
+    //实现抽象方法的类
+    printMetting(): void {
+        console.log('The Accounting Department meets each Monday at 10am.');
+    }
+    generateReports(): void {
+        console.log('Generating accounting reports...');
+    }
+}
