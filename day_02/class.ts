@@ -42,8 +42,8 @@ class Horse extends Animal {
 }
 let anm = new Snake("Sammy the Python");
 let tom: Animal = new Horse("hello world");
-
 // console.log(anm.move())
+
 // console.log(tom.move())
 class Persion {
     protected name: string;
@@ -65,3 +65,29 @@ class Employee extends Persion {
 let hardword = new Employee("Howard", "Sales");
 
 console.log(hardword.getElevatorPitch())
+
+
+// let passcode = "secret passcode";
+
+// class Employees {
+//     private _fullName: string;
+
+//     get fullName(): string {
+//         return this._fullName;
+//     }
+
+//     set fullName(newName: string) {
+//         if (passcode && passcode == "secret passcode") {
+//             this._fullName = newName;
+//         }
+//         else {
+//             console.log("Error: Unauthorized update of employee!");
+//         }
+//     }
+// }
+
+// let employee = new Employees();
+// employee.fullName = "Bob Smith";
+// if (employee.fullName) {
+//     alert(employee.fullName);
+// }
