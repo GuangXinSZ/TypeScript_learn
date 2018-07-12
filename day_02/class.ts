@@ -118,7 +118,7 @@ abstract class AnimalDog {
         console.log("roaming the earch")
     }
 }
-//抽象类的调用方法
+//抽象类的继承
 abstract class Department {
     thenName: string;
     constructor ( public name: string  ){
@@ -142,3 +142,5 @@ class AccountingDepartment extends Department {
         console.log('Generating accounting reports...');
     }
 }
+let department: Department; //定义对抽象类型的引用
+// department = new Department()
