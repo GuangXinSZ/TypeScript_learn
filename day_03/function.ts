@@ -68,5 +68,10 @@ function buildNameD (firstName: string, ...restOfName: string[]) {
     return firstName + '添加' + restOfName.join(" ");
 }
 let emplyoyeeName = buildNameD("1","2","3");
+
 console.log(emplyoyeeName);
 
+//this跟箭头函数
+function f(this: void) {
+    //make sure `this`
+}
