@@ -144,3 +144,32 @@ class AccountingDepartment extends Department {
 }
 let department: Department; //定义对抽象类型的引用
 // department = new Department()
+department = new  AccountingDepartment();
+department.printName();
+// department.printMeeting();
+// department.generateReports(); // 错误: 方法在声明的抽象类中不存在
+//高级技巧 构造函数
+class Greeters {
+    greeting: string;
+    constructor( message: string ) {
+        this.greeting = message;
+    }
+    //获取greeting
+    greet () {
+        return 'hello,'+ this.greeting
+    }
+}
+let gretter: Greeters;
+gretter = new Greeters(" world ");
+console.log(gretter.greet());
+
+//最后一节把类当做接口使用
+class Point {
+    x: number;
+    y: number;
+}
+interface Point3d extends Point {
+    z: number
+}
+let point3d: Point3d = { x: 1, y: 2, z: 3 };
+console.log(point3d.x)
